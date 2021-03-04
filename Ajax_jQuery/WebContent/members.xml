@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members>
+	<member>
+		<idx>1</idx>
+		<name>홍길동1</name>
+		<age>27</age>
+		<addr>서울</addr>
+		<regdate>2021-02-08</regdate>
+	</member>
+	<member>
+		<idx>2</idx>
+		<name>홍길동2</name>
+		<age>37</age>
+		<addr>대전</addr>
+		<regdate>2021-02-08</regdate>
+	</member>
+</members>
