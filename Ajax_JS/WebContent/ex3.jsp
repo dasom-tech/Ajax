@@ -25,10 +25,13 @@
 	var cnt = 1;
 	//readyState 상태가 변할 때 실행할 콜백함수 작성
 	request.onreadystatechange = function() {
-		alert("onreadystatechange 실행 : \n"
-				+ (cnt++) + "번째 실행\n"
-				+ "readyState : " + request.readyState + "\n"
-				+ "status : " + request.status);
+		console.log(">request.readyState : " + request.readyState);
+		console.log(">request.status : " + request.status);
+		//응답데이터를 모두 받고 오류 없이 성공적으로 실행되었을 때
+		if (request.readyState == 4 && request.status == 200) {
+			//4. 응답데이터 처리
+			document.body.innerHTML += request.responseText;
+		}
 	};
 	
 	//2. open("전송방식", "요청정보", "비동기여부")
@@ -37,8 +40,7 @@
 	//3. send() : 실행
 	request.send();
 	
-	//4. 응답데이터 처리
-	document.body.innerHTML += request.responseText;
+	
 </script>
 </body>
 </html>
